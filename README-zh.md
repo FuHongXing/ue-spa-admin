@@ -30,12 +30,12 @@ npm run build --report
 
 [MIT](https://github.com/FuHongXing/ue-spa-admin/blob/master/LICENSE) license.
 
-##Powered by
+## Powered by
 
 基于以下开源项目修改
 
-> https://github.com/PanJiaChen/vueAdmin-template
- > https://github.com/PanJiaChen/vue-element-admin
+**vueAdmin-template** https://github.com/PanJiaChen/vueAdmin-template
+**vue-element-admin** https://github.com/PanJiaChen/vue-element-admin
 
 Copyright (c) 2018-present FuHongXing
 
