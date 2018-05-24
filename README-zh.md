@@ -34,8 +34,10 @@ npm run build --report
 
 基于以下开源项目修改
 
-https://github.com/PanJiaChen/vueAdmin-template
-https://github.com/PanJiaChen/vue-element-admin
+```
+# https://github.com/PanJiaChen/vueAdmin-template
+# https://github.com/PanJiaChen/vue-element-admin
+```
 
 Copyright (c) 2018-present FuHongXing
 
