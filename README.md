@@ -31,7 +31,7 @@ npm run build --report
 
 ## Powered by
 
-[vueAdmin-template](https://github.com/PanJiaChen/vueAdmin-template)
-[vue-element-admin](https://github.com/PanJiaChen/vue-element-admin)
+[[vueAdmin-template]](https://github.com/PanJiaChen/vueAdmin-template)
+[[vue-element-admin]](https://github.com/PanJiaChen/vue-element-admin)
 
 Copyright (c) 2018-present fuhongxing
