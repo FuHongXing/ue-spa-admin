@@ -73,7 +73,7 @@ const webpackConfig = merge(baseWebpackConfig, {
       template: 'index.html',
       inject: true,
       favicon: resolve('favicon.ico'),
-      title: 'vue-element-admin',
+      title: 'ue-spa-admin',
       minify: {
         removeComments: true,
         collapseWhitespace: true,
