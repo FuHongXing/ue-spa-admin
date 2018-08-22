@@ -8,6 +8,8 @@ Vue.use(Router)
 
 /* Layout */
 import Layout from '../views/layout/Layout'
+/* Router Modules */
+import nestedRouter from './modules/nested'
 
 /** note: submenu only apppear when children.length>=1
  *   detail see  https://panjiachen.github.io/vue-element-admin-site/#/router-and-nav?id=sidebar
@@ -139,6 +141,7 @@ export const asyncRouterMap = [{
     }
   }]
 },
+nestedRouter,
 {
   path: '/404',
   component: _import('404'),
