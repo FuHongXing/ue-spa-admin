@@ -1,7 +1,9 @@
 <template>
   <el-menu class="navbar" mode="horizontal">
     <hamburger :toggle-click="toggleSideBar" :is-active="sidebar.opened" class="hamburger-container" />
-    <breadcrumb/>
+
+    <breadcrumb class="breadcrumb-container"/>
+
     <div class="right-menu">
       <el-tooltip :content="$t('navbar.screenfull')" effect="dark" placement="bottom">
         <screenfull class="screenfull right-menu-item" />
