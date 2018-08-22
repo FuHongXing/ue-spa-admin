@@ -1,8 +1,8 @@
 <template>
   <div class="dashboard-container">
-    <div class="dashboard-text">{{$t('login.username')}}:{{name}}</div>
-    <div class="dashboard-text">{{$t('permission.roles')}}:
-      <span v-for='role in roles' :key='role'>[{{role}}]</span>
+    <div class="dashboard-text">{{ $t('login.username') }}:{{ name }}</div>
+    <div class="dashboard-text">{{ $t('permission.roles') }}:
+      <span v-for="role in roles" :key="role">[{{ role }}]</span>
     </div>
   </div>
 </template>
@@ -11,7 +11,7 @@
 import { mapGetters } from 'vuex'
 
 export default {
-  name: 'dashboard',
+  name: 'Dashboard',
   computed: {
     ...mapGetters([
       'name',

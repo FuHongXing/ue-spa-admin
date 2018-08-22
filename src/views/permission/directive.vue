@@ -25,7 +25,7 @@ import permission from '@/directive/permission/index.js' // 权限判断指令
 import SwitchRoles from './components/SwitchRoles'
 
 export default {
-  name: 'directivePermission',
+  name: 'DirectivePermission',
   components: { SwitchRoles },
   directives: { permission },
   data() {

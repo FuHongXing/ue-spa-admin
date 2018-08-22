@@ -1,43 +1,41 @@
 <template>
   <div class="app-container">
-    <el-table :data="list" v-loading.body="listLoading" element-loading-text="Loading" border fit highlight-current-row>
-      <el-table-column type="selection" width="35">
-      </el-table-column>
-      <el-table-column align="center" label='ID' width="95">
+    <el-table v-loading.body="listLoading" :data="list" element-loading-text="Loading" border fit highlight-current-row>
+      <el-table-column type="selection" width="35" />
+      <el-table-column align="center" label="ID" width="95">
         <template slot-scope="scope">
-          {{scope.row.index}}
+          {{ scope.row.index }}
         </template>
       </el-table-column>
       <el-table-column :label="$t('table.title')">
         <template slot-scope="scope">
-          {{scope.row.title}}
+          {{ scope.row.title }}
         </template>
       </el-table-column>
       <el-table-column :label="$t('table.author')" width="110" align="center">
         <template slot-scope="scope">
-          <span>{{scope.row.author}}</span>
+          <span>{{ scope.row.author }}</span>
         </template>
       </el-table-column>
       <el-table-column :label="$t('table.pageviews')" width="110" align="center">
         <template slot-scope="scope">
-          {{scope.row.pageviews}}
+          {{ scope.row.pageviews }}
         </template>
       </el-table-column>
-      <el-table-column class-name="status-col" :label="$t('table.status')" width="110" align="center">
+      <el-table-column :label="$t('table.status')" class-name="status-col" width="110" align="center">
         <template slot-scope="scope">
-          <el-tag :type="scope.row.status | statusFilter">{{scope.row.status}}</el-tag>
+          <el-tag :type="scope.row.status | statusFilter">{{ scope.row.status }}</el-tag>
         </template>
       </el-table-column>
-      <el-table-column align="center" prop="created_at" :label="$t('table.displaytime')" width="200">
+      <el-table-column :label="$t('table.displaytime')" align="center" prop="created_at" width="200">
         <template slot-scope="scope">
-          <i class="el-icon-time"></i>
-          <span>{{scope.row.display_time}}</span>
+          <i class="el-icon-time" />
+          <span>{{ scope.row.display_time }}</span>
         </template>
       </el-table-column>
     </el-table>
     <div class="app-pager">
-      <el-pagination background @size-change="handleSizeChange" @current-change="handleCurrentChange" :current-page="listQuery.page" :page-sizes="[10,20,30, 50]" :page-size="listQuery.limit" layout="total, sizes, prev, pager, next, jumper" :total="total">
-      </el-pagination>
+      <el-pagination :total="total" :current-page="listQuery.page" :page-sizes="[10,20,30, 50]" :page-size="listQuery.limit" layout="total, sizes, prev, pager, next, jumper" background @current-change="handleCurrentChange" @size-change="handleSizeChange" />
     </div>
   </div>
 </template>
@@ -46,6 +44,16 @@
 import { getList } from '@/api/table'
 
 export default {
+  filters: {
+    statusFilter(status) {
+      const statusMap = {
+        published: 'success',
+        draft: 'gray',
+        deleted: 'danger'
+      }
+      return statusMap[status]
+    }
+  },
   data() {
     return {
       list: null,
@@ -60,16 +68,6 @@ export default {
         type: undefined,
         sort: '+index'
       }
-    }
-  },
-  filters: {
-    statusFilter(status) {
-      const statusMap = {
-        published: 'success',
-        draft: 'gray',
-        deleted: 'danger'
-      }
-      return statusMap[status]
     }
   },
   created() {
