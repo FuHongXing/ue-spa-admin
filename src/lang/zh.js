@@ -67,7 +67,8 @@ export default {
     dashboard: '首页',
     github: '项目地址',
     screenfull: '全屏',
-    theme: '换肤'
+    theme: '换肤',
+    langSelect: '切换语言成功'
   },
   login: {
     title: '系统登录',
@@ -76,7 +77,9 @@ export default {
     password: '密码',
     any: '随便填',
     thirdparty: '第三方登录',
-    thirdpartyTips: '本地不能模拟，请结合自己业务进行模拟！！！'
+    thirdpartyTips: '本地不能模拟，请结合自己业务进行模拟！！！',
+    msg1: '请输入正确的用户名',
+    msg2: '密码不能小于5位'
   },
   documentation: {
     documentation: '文档',
@@ -146,5 +149,13 @@ export default {
     close: '关闭',
     closeOthers: '关闭其它',
     closeAll: '关闭所有'
+  },
+  page404: {
+    title: '哎呀！',
+    copyRight: '版权所有',
+    company: '上海递拎宝网络科技有限公司安徽分公司',
+    message: '网管说这个页面你不能进...',
+    info: '请检查您输入的网址是否正确，请点击以下按钮返回主页或者发送错误报告',
+    goBack: '返回首页'
   }
 }

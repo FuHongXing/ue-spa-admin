@@ -67,7 +67,8 @@ export default {
     dashboard: 'Dashboard',
     github: 'Github',
     screenfull: 'screenfull',
-    theme: 'theme'
+    theme: 'theme',
+    langSelect: 'Switch language success'
   },
   login: {
     title: 'Login Form',
@@ -76,7 +77,9 @@ export default {
     password: 'Password',
     any: 'any',
     thirdparty: 'Or connect with',
-    thirdpartyTips: 'Can not be simulated on local, so please combine you own business simulation! ! !'
+    thirdpartyTips: 'Can not be simulated on local, so please combine you own business simulation! ! !',
+    msg1: 'Please input the correct username.',
+    msg2: 'The password should not be less than 5 bits.'
   },
   documentation: {
     documentation: 'Documentation',
@@ -146,5 +149,13 @@ export default {
     close: 'Close',
     closeOthers: 'Close Others',
     closeAll: 'Close All'
+  },
+  page404: {
+    title: 'OOPS!',
+    copyRight: 'All Right Reserved',
+    company: 'Shanghai Di Bao Bao Network Technology Co., Ltd. Anhui branch',
+    message: "Network management says you can't enter this page...",
+    info: 'Please check whether the web address you entered is correct. Please click the following button to return to the home page or send the error report.',
+    goBack: 'Go Home'
   }
 }
