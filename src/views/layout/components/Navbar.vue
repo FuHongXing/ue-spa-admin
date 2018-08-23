@@ -2,9 +2,11 @@
   <el-menu class="navbar" mode="horizontal">
     <hamburger :toggle-click="toggleSideBar" :is-active="sidebar.opened" class="hamburger-container" />
 
-    <breadcrumb class="breadcrumb-container"/>
+    <breadcrumb class="breadcrumb-container" />
 
     <div class="right-menu">
+      <error-log class="errLog-container right-menu-item" />
+
       <el-tooltip :content="$t('navbar.screenfull')" effect="dark" placement="bottom">
         <screenfull class="screenfull right-menu-item" />
       </el-tooltip>
@@ -35,6 +37,7 @@
 import { mapGetters } from 'vuex'
 import Breadcrumb from '@/components/Breadcrumb'
 import Hamburger from '@/components/Hamburger'
+import ErrorLog from '@/components/ErrorLog'
 import LangSelect from '@/components/LangSelect'
 import Screenfull from '@/components/Screenfull'
 
@@ -42,12 +45,14 @@ export default {
   components: {
     Breadcrumb,
     Hamburger,
+    ErrorLog,
     LangSelect,
     Screenfull
   },
   computed: {
     ...mapGetters([
       'sidebar',
+      'name',
       'avatar'
     ])
   },
